@@ -1,0 +1,2 @@
+"dev": "gulp && webpack serve --progress -c config/webpack.dev.js", - было
+"dev": "gulp && webpack serve --host 0.0.0.0 --progress -c config/webpack.dev.js", - стало

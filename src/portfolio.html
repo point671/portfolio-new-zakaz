@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Портфолио"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="hero-portfolio">
+				<!-- Фон -->
+				<div class="hero-portfolio__bg">
+					<img src="@img/portfolio/hero.webp" alt="Деревянный дом">
+					<div class="hero-portfolio__overlay"></div>
+				</div>
+
+				<div class="hero-portfolio__container">
+					<!-- Хлебные крошки -->
+					<nav class="breadcrumbs">
+						<a href="#" class="breadcrumbs__link">Готовые дома</a>
+						<span class="breadcrumbs__separator">/</span>
+						<span class="breadcrumbs__current">Портфолио</span>
+					</nav>
+
+					<!-- Основной контент -->
+					<h1 class="hero-portfolio__title">НАШИ ПРОЕКТЫ</h1>
+
+					<p class="hero-portfolio__subtitle">
+						МЫ СТРОИМ И ОТДЕЛЫВАЕМ<br>
+						ДОМА И КВАРТИРЫ С 2014 Г.
+					</p>
+
+					<p class="hero-portfolio__text">
+						НА ЭТОЙ СТРАНИЦЕ СОБРАНЫ ДЕСЯТКИ РЕАЛИЗОВАННЫХ ПРОЕКТОВ —
+						ОТ УЮТНЫХ ИНТЕРЬЕРОВ ДО ДОМОВ ПОД КЛЮЧ.
+					</p>
+
+					<!-- Статистика в рамке -->
+					<div class="hero-portfolio__stats stats">
+						<div class="stats__item">
+							<span class="stats__number">11лет</span>
+							<span class="stats__label">на рынке</span>
+						</div>
+						<div class="stats__item">
+							<span class="stats__number">700+</span>
+							<span class="stats__label">реализованных проектов</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Плавающие иконки справа внизу -->
+				<div class="hero-portfolio__floating">
+					<a href="#" class="hero-portfolio__icon">
+						<img src="@img/portfolio/inst.svg" alt="Галерея">
+					</a>
+					<a href="tel:+74952953045" class="hero-portfolio__icon">
+						<img src="@img/portfolio/max-messenger-sign-logo-2.png" alt="Позвонить">
+					</a>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+</html>

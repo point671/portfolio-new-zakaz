@@ -1,0 +1,363 @@
+// Extracted from Pixso DSL item 888:585
+// Main group: 1182px x 906px
+// Title: Haval Light, 48px, color #FFFDF9 (rgba(255,253,249,1)), line-height 100%, uppercase
+// Right frame: 580x617, radius 34px, inner shadows (multiple)
+// Left photo position: top 170px, left 0
+// Right frame position: top 170px, left 602px (gap ~22px from edge)
+// Subtitle: Haval Light, 24px  
+// Body text: Involve Regular, 24px, color rgba(255,255,255,0.6)
+
+.who-answer {
+    padding-top: clamp(3.75rem, 1.77rem + 9.89vw, 9.25rem);
+    padding-bottom: clamp(3.125rem, 2.001rem + 5.618vw, 6.25rem);
+    background-color: #292D32;
+    color: #fff;
+
+    &__container {
+        // Container styling handled by base styles
+    }
+
+    &__title {
+    font-family: Haval;
+    font-style: Light;
+    font-size: clamp(1.75rem, 1.25rem + 2.5vw, 3rem); // Fluid 28px to 48px
+    font-weight: 300;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgba(255, 253, 249, 1);
+    margin-bottom: clamp(1.875rem, 1rem + 3vw, 4.6875rem); // Fluid 30px to 75px
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: rem(580) rem(587); // Exact desktop dimensions 
+        justify-content: space-between;
+        gap: rem(22);
+        
+        @media (max-width: 1200px) {
+             grid-template-columns: 1fr 1fr; 
+        }
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+            gap: rem(40);
+        }
+    }
+
+    // Card styling
+    &__col {
+        display: flex;
+        flex-direction: column;
+        border-radius: rem(34);
+        overflow: hidden;
+        position: relative;
+    }
+
+    // Right Column (Company) - Standard Card
+    &__col--card {
+        height: rem(653); 
+        min-height: rem(653);
+
+        background: rgba(69, 72, 74, 0.6);
+        padding: rem(30);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 
+            inset 0 0 16px rgba(242, 242, 242, 0.05),
+            inset 0 0 3px rgba(255, 255, 255, 0.05),
+            inset -1px -1px 0.5px rgba(255, 255, 255, 0.15),
+            inset 1px 1px 0.5px rgba(255, 255, 255, 0.15);
+            
+        // Flexbox layout for precise positioning
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; // Push all content (Logo + Text) to the bottom
+
+        // Flex container for Title + Logo
+        .who-answer__header-row {
+            display: flex;
+            align-items: flex-end; // Align text to bottom as requested
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: rem(30);
+
+            @media (max-width: 600px) {
+                flex-direction: column;
+                align-items: center; // Center items
+                gap: rem(20);
+            }
+        }
+
+        .who-answer__logo {
+           // Logo takes available space to center itself vertically relative to the empty space
+           // flex: 1; // Removed per user request to pack content at bottom
+           display: flex;
+           flex-direction: column; // Standard vertical stack
+           align-items: center;
+           justify-content: center;
+           
+           width: 331px; // User requested strict 331px
+           max-width: 100%;
+           // margin: 0 auto; // REMOVED auto centering
+           
+           // margin-bottom: rem(30); // Moved to header-row
+            transform: translate(-88px, 29px);
+
+           @media (max-width: 1200px) {
+               margin-bottom: 0; 
+           }
+
+           @media (max-width: 600px) {
+               transform: none;
+               width: auto; // Allow to fit content if needed
+           }
+
+           // Avoid clipping in the intermediate state (900px - 1050px)
+           @media (max-width: 1050px) {
+                width: 260px; 
+                img {
+                    height: auto;
+                }
+           }
+
+
+           img { 
+               width: 100%; 
+               height: 279px; // User requested strict 279px
+               display: block; 
+                
+
+               @media (max-width: 450px) {
+                   height: auto;
+               }
+
+               @media (max-width: 900px) {
+                   transform: translate(0, 0);
+                   margin-bottom: 20px;
+               }
+           }
+        }
+        
+        // Group text content at the bottom
+        .who-answer__content-wrapper {
+             margin-top: 0; 
+        }
+
+        .who-answer__subtitle {
+            color: rgba(255, 255, 255, 1);
+            font-family: Haval;
+            font-style: Light;
+            font-size: clamp(16px, 2.2vw, 24px); // Fluid scaling to match logo
+            font-weight: 300;
+            line-height: 120%;
+            letter-spacing: 0.3px;
+            text-align: left;
+            text-transform: uppercase;
+            margin-bottom: 0; // Removing bottom margin as it's in a row now
+        }
+        
+        @media (max-width: 900px) {
+            min-height: auto;
+            height: auto;
+            justify-content: flex-start; // Start from top on mobile
+        }
+
+        @media (max-width: 600px) {
+            padding: rem(25);
+        }
+    }
+
+    // Left Column (Person) - Overlay Design
+    &__col--person {
+        min-height: rem(730); 
+        justify-content: flex-end; 
+        padding: 0; 
+        
+        @media (max-width: 900px) {
+            min-height: rem(500);
+        }
+    }
+
+    &__bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__overlay {
+        position: relative;
+        z-index: 1;
+        
+        // Стили из Pixso 873:4721 (Parent) и 873:4722 (Blur Child)
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        // filter: blur(6px); // НЕ используем, так как это размоет текст внутри. blur(6px) уже есть в backdrop-filter.
+        
+        // Тень (границы) как у .who-answer__col--card по запросу пользователя
+        box-shadow: 
+            inset 0 0 16px rgba(242, 242, 242, 0.05),
+            inset 0 0 3px rgba(255, 255, 255, 0.05),
+            inset -1px -1px 0.5px rgba(255, 255, 255, 0.15),
+            inset 1px 1px 0.5px rgba(255, 255, 255, 0.15);
+        
+        border-radius: rem(34);
+        padding: 43px 15px 37px 15px;
+        display: flex;
+        flex-direction: column;
+        // gap: rem(12); // Removed to allow precise margin control per user request
+        
+        min-height: 21.75rem;// Increased height per user request (base 360 + 100)
+        
+        border-top: none;
+    }
+    
+    // Typography overrides for Person card
+    &__col--person .who-answer__subtitle {
+        color: rgba(255, 255, 255, 1);
+        font-family: Haval;
+        font-style: Light;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 120%;
+        letter-spacing: 0.3px;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: rem(24); // 24px spacing per request
+
+        @media (max-width: 900px) {
+            font-size: 20px;
+        }
+    }
+    
+    &__name {
+        color: rgba(255, 255, 255, 1);
+        font-family: Involve;
+        font-style: SemiBold Oblique;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: rem(12); // 12px spacing per request
+    }
+    
+    &__col--person .who-answer__text {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: Involve;
+        font-style: Regular;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: left;
+        margin-bottom: 24px;
+
+        @media (max-width: 900px) {
+            font-size: 18px;
+        }
+    }
+    
+    // Reset standard image container for other uses if any
+    &__image {
+        display: none; // Hide standard image container if present in structure
+    }
+
+
+    &__subtitle {
+color: rgba(255, 255, 255, 1);
+font-family: Haval;
+font-style: Light;
+font-size: 24px;
+font-weight: 300;
+line-height: 120%;
+letter-spacing: 0.3px;
+text-align: left;
+text-transform: uppercase;
+    }
+
+    &__text {
+   color: rgba(255, 255, 255, 0.6);
+font-family: Involve;
+font-style: Regular;
+font-size: 24px;
+font-weight: 400;
+line-height: 130%;
+letter-spacing: 0%;
+text-align: left;
+    }
+}
+
+/* ============================================
+   UNIFIED MOBILE STYLES - who-answer
+   ============================================ */
+@media (max-width: 768px) {
+    .who-answer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        &__col {
+            border-radius: 20px;
+        }
+        
+        &__col--card {
+            min-height: auto;
+            height: auto;
+            padding: 20px;
+        }
+        
+        &__col--person {
+            min-height: 350px;
+        }
+        
+        &__overlay {
+            padding: 25px 15px;
+            border-radius: 20px;
+            min-height: auto;
+        }
+        
+        &__subtitle {
+            font-size: 18px;
+        }
+        
+        &__name {
+            font-size: 18px;
+        }
+        
+        &__text {
+            font-size: 16px;
+            line-height: 140%;
+        }
+        
+        &__logo {
+            transform: none;
+            width: 200px;
+            
+            img {
+                height: auto;
+            }
+        }
+        
+        .who-answer__header-row {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+}

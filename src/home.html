@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+            <div class="projects-wrapper">
+		    <section class="projects">
+            <div class="projects__container">
+            <div class="projects__header">
+                <h1 class="projects__title">Ремонт коттеджей и частных домов в Москве и МО</h1>
+                <p class="projects__subtitle">Ремонтируем любые коттеджи и дома под ключ</p>
+                <p class="projects__description">
+                    Мы выполняем ремонт коттеджей, загородных и частных домов под ключ: внутреннюю и внешнюю отделку,
+                    инженерные системы, фасады и кровлю. Работаем по Москве и всей Московской области, в том числе по
+                    таунхаусам и домам в коттеджных посёлках.
+                </p>
+            </div>
+
+            <div class="projects__grid">
+                <!-- Card 1 -->
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="@img/Main-two-block/Коттеджи.webp"
+                            alt="Коттеджи и загородные дома">
+                        <div class="project-card__badge">
+                            <span class="project-card__badge-icon">
+                                <img src="@img/Main-two-block/Symbol.svg" alt="icon"
+                                    style="width: 24px; height: 24px;">
+                            </span>
+                            <span class="project-card__badge-text">от 80<br>до 600 м²</span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Коттеджи <br>и загородные <br>дома</h3>
+                        <p class="project-card__desc">Каменные, монолитные, газобетонные, каркасные коттеджи</p>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="@img/Main-two-block/частные_дома.webp"
+                            alt="Частные дома в Москве">
+                        <div class="project-card__badge">
+                            <span class="project-card__badge-icon">
+                                <img src="@img/Main-two-block/Symbol2.svg" alt="icon"
+                                    style="width: 24px; height: 24px;">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Частные дома <br>в Москве</h3>
+                        <p class="project-card__desc">Дома и таунхаусы в черте города, старый фонд и современные поселки
+                            городского типа</p>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="@img/Main-two-block/деревянные_дома.webp"
+                            alt="Деревянные дома и срубы">
+                        <div class="project-card__badge">
+                            <span class="project-card__badge-icon">
+                                <img src="@img/Main-two-block/Symbol3.svg" alt="icon"
+                                    style="width: 24px; height: 24px;">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Деревянные <br>дома и срубы</h3>
+                        <p class="project-card__desc">Брусовые,<br>  каркасные, дома из бревна. Полный комплекс ремонта и
+                            отделки, включая защиту древесины</p>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="project-card">
+                    <div class="project-card__image-wrapper">
+                        <img class="project-card__image" src="@img/Main-two-block/Дома_с_Историей.webp"
+                            alt="Дома после строительства">
+                        <div class="project-card__badge">
+                            <span class="project-card__badge-icon">
+                                <img src="@img/Main-two-block/Symbol4.svg" alt="icon"
+                                    style="width: 24px; height: 24px;">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Дома после <br>строительства<br>и с историей</h3>
+                        <p class="project-card__desc">Ремонт «с нуля» в новом коттедже и обновление домов с действующими
+                            коммуникациями и отделкой</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects__footer">
+                <p class="projects__footer-text">Работаем там, где вам удобно</p>
+                <p class="projects__locations">
+                    Выезжаем по всей Москве и Московской области: Новая Рига, Рублёво-Успенское, Киевское, Минское,
+                    Новорижское, Ярославское, Дмитровское и другие направления.
+                </p>
+                <p class="projects__note">Сметчик приезжает на объект бесплатно.</p>
+                <button class="btn btn--primary">Получить расчёт ремонта коттеджа</button>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <!-- Types of Repair Section -->
+    <div class="projects-wrapper">
+        <section class="repair-types">
+            <div class="projects__container">
+                <div class="repair-types__header">
+                    <h2 class="repair-types__title">Виды ремонта коттеджей<br>и частных домов</h2>
+                </div>
+
+                <div class="repair-types__grid">
+                    <!-- Card 1 -->
+                    <article class="repair-card">
+                        <div class="repair-card__image-wrapper">
+                             <img class="repair-card__image" src="@img/Main-two-block/Коттеджи.webp" alt="Косметический ремонт">
+                             <div class="repair-card__overlay-gradient"></div>
+                        </div>
+                        <div class="repair-card__content">
+                            <h3 class="repair-card__title">Косметический <br>ремонт <br>коттеджа</h3>
+                            <p class="repair-card__desc">Обновление интерьера без перепланировки: перекраска стен и потолков, переклейка обоев, замена напольных покрытий, установка нового освещения и розеток.</p>
+                            <p class="repair-card__subdesc">Подходит, когда дом в хорошем состоянии, но нужен свежий вид.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="repair-card">
+                        <div class="repair-card__image-wrapper">
+                            <img class="repair-card__image" src="@img/Main-two-block/частные_дома.webp" alt="Капитальный ремонт">
+                             <div class="repair-card__overlay-gradient"></div>
+                        </div>
+                        <div class="repair-card__content">
+                            <h3 class="repair-card__title">Капитальный <br>ремонт <br>загородного <br>дома</h3>
+                            <p class="repair-card__desc">Замена инженерных систем, выравнивание стен и полов, устройство стяжек, перепланировка, черновая и чистовая отделка.</p>
+                            <p class="repair-card__subdesc">Оптимально, когда дом старый или требует серьёзных изменений планировки и инженерии.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="repair-card">
+                        <div class="repair-card__image-wrapper">
+                            <img class="repair-card__image" src="@img/Main-two-block/деревянные_дома.webp" alt="Ремонт под ключ">
+                             <div class="repair-card__overlay-gradient"></div>
+                        </div>
+                        <div class="repair-card__content">
+                            <h3 class="repair-card__title">Ремонт <br>коттеджа <br>под ключ</h3>
+                            <p class="repair-card__desc">Полный цикл работ «от коробки» до заселения: проект, черновые и чистовые работы, инженерные сети, встроенная мебель и свет.</p>
+                            <p class="repair-card__subdesc">Вариант для тех, кто хочет получить готовый дом «под ключ» по фиксированной смете и срокам*.</p>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="repair-card">
+                        <div class="repair-card__image-wrapper">
+                            <img class="repair-card__image" src="@img/Main-two-block/Дома_с_Историей.webp" alt="Отдельные работы">
+                             <div class="repair-card__overlay-gradient"></div>
+                        </div>
+                        <div class="repair-card__content">
+                            <h3 class="repair-card__title">Отдельные <br>работы <br>и частичный <br>ремонт</h3>
+                            <p class="repair-card__desc">Локальные задачи:</p>
+                            <p class="repair-card__subdesc">ремонт одной зоны (кухня, санузел, мансарда), замена кровли, обновление фасада, утепление, монтаж отопления и водоснабжения, отделка цоколя, террас и балконов.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="repair-types__footer">
+                    <p class="repair-types__note">*Среднерыночные цены в Москве по таким услугам начинаются <br> 
+                        примерно от 7 000–11 000 руб./м² только за работы,
+                         в премиум-сегменте <br>
+                       — значительно выше.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Calculator Section -->
+    <div class="calculator-wrapper">
+        <section class="calculator">
+            <div class="calculator__container">
+                <div class="calculator__header">
+                    <h2 class="calculator__title">Онлайн-калькулятор<br>ремонта коттеджа в Москве<br>и области</h2>
+                    <div class="calculator__description">
+                        <p>Узнайте ориентировочную стоимость ремонта коттеджа или частного дома в Москве и Московской
+                            области за 1 минуту. Калькулятор считает цену по среднерыночным ставкам за м² в 2025 году. Для
+                            точной сметы инженер приедет на объект, выполнит обмеры и учтёт особенности дома.</p>
+                    </div>
+                </div>
+
+                <div class="calculator__form-wrapper">
+                    <form class="calculator__form" id="calculatorForm">
+                        <div class="calculator__body">
+                            <!-- Left Column -->
+                            <div class="calculator__column">
+                                <div class="calculator__input-group">
+                                    <input type="number" id="area" class="calculator__input" placeholder=" " min="1" step="1" required>
+                                    <label for="area" class="calculator__label">Площадь дома, м²</label>
+                                </div>
+                                
+                                <div class="calculator__input-group calculator__select-wrapper">
+                                    <select id="repairType" class="calculator__select" required>
+                                        <option value="" disabled selected>Тип ремонта</option>
+                                        <option value="cosmetic">Косметический</option>
+                                        <option value="capital">Капитальный</option>
+                                        <option value="full">Комплексный под ключ</option>
+                                        <option value="premium">Премиальный</option>
+                                    </select>
+                                    <svg class="calculator__select-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <div class="calculator__input-group calculator__select-wrapper">
+                                    <select id="materials" class="calculator__select">
+                                        <option value="" disabled selected>Материалы</option>
+                                        <option value="client">Материалы клиента</option>
+                                        <option value="company">Материалы компании</option>
+                                    </select>
+                                    <svg class="calculator__select-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <button type="submit" class="btn btn--primary calculator__btn">Рассчитать стоимость</button>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="calculator__column">
+                                <div class="calculator__input-group calculator__select-wrapper">
+                                    <select id="objectType" class="calculator__select">
+                                        <option value="" disabled selected>Тип объекта</option>
+                                        <option value="cottage">Коттедж / загородный дом</option>
+                                        <option value="city-house">Частный дом в Москве</option>
+                                        <option value="townhouse">Таунхаус / дуплекс</option>
+                                    </select>
+                                    <svg class="calculator__select-arrow" width="14" height="8" viewBox="0 0 14 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L7 7L13 1" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <div class="calculator__options">
+                                    <div class="calculator__options-title">Опции:</div>
+                                    <div class="calculator__checkboxes">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="facade" name="facade">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Ремонт фасада</span>
+                                        </label>
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" id="roof" name="roof">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Ремонт кровли</span>
+                                        </label>
+                                        <label class="custom-checkbox full-width">
+                                            <input type="checkbox" id="engineering" name="engineering">
+                                            <span class="checkmark"></span>
+                                            <span class="checkbox-text">Монтаж/замена инженерных систем</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Результат расчёта -->
+                    <div id="calc-result" class="calculator__result" aria-live="polite"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Prices Section -->
+    <section class="prices">
+        <div class="projects__container">
+            <div class="prices__header">
+                <h2 class="prices__title">Цены на ремонт коттеджей и частных домов в Москве и области</h2>
+                <p class="prices__subtitle">Пакеты ремонта коттеджа за м² (работы)</p>
+                <p class="prices__top-text">
+                    Цены ниже ориентировочные для работ без материалов по коттеджам от 120 м² в Москве <br> и Московской области. Финальная стоимость зависит от состояния дома, сложности <br> инженерии и отделки.
+                </p>
+            </div>
+            
+            <div class="prices__table-wrapper">
+                <div class="prices__table">
+                    <!-- Head -->
+                    <div class="prices__row prices__row--head">
+                        <div class="prices__col prices__col--service">Пакет</div>
+                        <div class="prices__col prices__col--desc">Описание</div>
+                        <div class="prices__col prices__col--price">Ориентир<br>по работам,<br>руб./м²</div>
+                        <div class="prices__col prices__col--target">Для каких домов</div>
+                        <div class="prices__col prices__col--budget">Пример<br>бюджета<br>для 200м²</div>
+                    </div>
+
+                    <!-- Row 1: Косметический -->
+                    <div class="prices__row">
+                        <div class="prices__col prices__col--service" data-label="Пакет">Косметический</div>
+                        <div class="prices__col prices__col--desc" data-label="Описание">Обновление отделки<br>без перепланировки</div>
+                        <div class="prices__col prices__col--price" data-label="Ориентир по работам">от 6 000</div>
+                        <div class="prices__col prices__col--target" data-label="Для каких домов">Обжитые дома<br>в хорошем состоянии</div>
+                        <div class="prices__col prices__col--budget" data-label="Пример бюджета">от 1 200 000</div>
+                    </div>
+                    <div class="prices__row-divider"></div>
+
+                    <!-- Row 2: Капитальный -->
+                    <div class="prices__row">
+                        <div class="prices__col prices__col--service" data-label="Пакет">Капитальный</div>
+                        <div class="prices__col prices__col--desc" data-label="Описание">Полная переработка<br>внутренних помещений,<br>инженерии</div>
+                        <div class="prices__col prices__col--price" data-label="Ориентир по работам">от 9 500</div>
+                        <div class="prices__col prices__col--target" data-label="Для каких домов">Полная переработка<br>внутренних помещений,<br>инженерии</div>
+                        <div class="prices__col prices__col--budget" data-label="Пример бюджета">от 1 900 000</div>
+                    </div>
+                    <div class="prices__row-divider"></div>
+
+                    <!-- Row 3: Под ключ -->
+                    <div class="prices__row">
+                        <div class="prices__col prices__col--service" data-label="Пакет">Под ключ</div>
+                        <div class="prices__col prices__col--desc" data-label="Описание">Комплексный ремонт<br>коттеджа под ключ<br>с инженерией</div>
+                        <div class="prices__col prices__col--price" data-label="Ориентир по работам">от 13 000</div>
+                        <div class="prices__col prices__col--target" data-label="Для каких домов">Комплексный ремонт<br>коттеджа под ключ<br>с инженерией</div>
+                        <div class="prices__col prices__col--budget" data-label="Пример бюджета">от 2 600 000</div>
+                    </div>
+                    <div class="prices__row-divider"></div>
+
+                     <!-- Row 4: Премиум -->
+                    <div class="prices__row">
+                        <div class="prices__col prices__col--service" data-label="Пакет">Премиум</div>
+                        <div class="prices__col prices__col--desc" data-label="Описание">Дизайнерский ремонт,<br>сложные материалы,<br>индивидуальные<br>решения</div>
+                        <div class="prices__col prices__col--price" data-label="Ориентир по работам">от 20 000</div>
+                        <div class="prices__col prices__col--target" data-label="Для каких домов">Дизайнерский ремонт,<br>сложные материалы,<br>индивидуальные<br>решения</div>
+                        <div class="prices__col prices__col--budget" data-label="Пример бюджета">от 4 000 000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Content -->
+            <div class="prices__mid-content">
+                <p class="prices__mid-text">
+                    Для точного расчёта ремонта коттеджа под ключ в Москве и области мы составляем  детальную смету по видам работ и материалам, закрепляем цену за м² и сроки в договоре.
+                </p>
+                <a href="#contact" class="prices__btn">Запросить подробный прайс и смету</a>
+                
+                <!-- Spoiler Container -->
+                <div data-spollers>
+                    <!-- Spoiler Trigger -->
+                    <button type="button" data-spoller class="prices__spoiler-trigger">Расценки на основные работы</button>
+                    
+                    <!-- Spoiler Content -->
+                    <div class="prices__spoiler-body">
+                        <p class="prices__mid-text">
+                            Ориентировочные расценки на популярные работы по ремонту и отделке коттеджа. Цены указаны за единицу объёма работ и служат отправной точкой для составления сметы.
+                        </p>
+
+                    <!-- Second Table: Detailed Work Prices -->
+                    <div class="prices__detail-wrapper">
+                        <div class="prices__detail-table">
+                            <!-- Header Row -->
+                            <div class="prices__detail-row prices__detail-row--head">
+                                <div class="prices__detail-col prices__detail-col--work">Вид работ</div>
+                                <div class="prices__detail-col prices__detail-col--unit">Ед. изм.</div>
+                                <div class="prices__detail-col prices__detail-col--price">Ориентировочная цена, руб.</div>
+                            </div>
+
+
+                    <!-- Row 1 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Штукатурка стен по маякам</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 600–800</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 2 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Шпаклёвка стен под покраску</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–450</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 3 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Покраска стен в 2 слоя</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–450</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 4 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Оклейка обоями</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–450</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 5 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Грунтовка стен / потолков</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 70–100</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 6 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Устройство стяжки пола до 70 мм</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 600–800</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 7 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Наливной выравнивающий пол</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–400</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 8 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Настил ламината / кварц-винила</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 300–500</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 9 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Укладка плитки на пол</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 1 200–1 500</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 10 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Укладка плитки на стены (санузел, фартук)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 1 300–2 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 11 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж тёплого пола (кабель/маты)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 400–800</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 12 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Устройство потолка из ГКЛ, 1 уровень</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 700–900</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 13 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Устройство потолка из ГКЛ, 2 уровня</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 900–1 200</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 14 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Натяжной потолок (работы)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 400–600</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 15 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж перегородок из ГКЛ</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 600–900</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 16 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Перегородки из ПГП</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 900–1 200</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 17 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж межкомнатной двери</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 3 000–5 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 18 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж электрощита до 24 модулей</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 2 000–3 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 19 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Вывод электроточки (розетка/выключатель)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–600</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 20 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Штробление под электрику</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">п.м.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–400</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 21 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж радиатора отопления</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 2 500–4 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 22 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж тёплого водяного пола (труба)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 800–1 200</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 23 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж сантехнических приборов (унитаз, раковина и т.д.)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 2 500–4 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 24 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Устройство душевого поддона из бетона</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">шт.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 10 000–14 000</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 25 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Шлифовка деревянных поверхностей</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 220–300</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 26 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Антисептирование деревянных конструкций</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 50–100</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 27 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Покраска деревянных фасадов / стен</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 60–120</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 28 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Устройство контробрешётки под фасад</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 140–200</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 29 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Обшивка фасада сайдингом</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 250–400</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 30 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Обшивка фасада имитацией бруса</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 280–450</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 31 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж стропильной системы</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 350–500</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 32 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж металлочерепицы</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 280–450</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 33 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Монтаж водосточной системы</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">п.м.</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 150–250</div>
+                    </div>
+                    <div class="prices__detail-divider"></div>
+
+                    <!-- Row 34 -->
+                    <div class="prices__detail-row">
+                        <div class="prices__detail-col prices__detail-col--work" data-label="Работа">Утепление кровли (1 слой 50 мм)</div>
+                        <div class="prices__detail-col prices__detail-col--unit" data-label="Ед.">м²</div>
+                        <div class="prices__detail-col prices__detail-col--price" data-label="Цена">от 50–100</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="prices__footer">
+                 <p class="prices__footer-text">
+                    Все работы по ремонту коттеджа и частного дома в Москве и области считаются по детальной смете. При больших объёмах предусмотрены индивидуальные скидки.
+                </p>
+            </div>
+            </div> <!-- End of Spoiler Body -->
+            </div> <!-- End of Spoiler Container -->
+        </div>
+    </section>
+
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="benefits__container">
+            <div class="benefits__header">
+                <h2 class="benefits__title">Почему выгодно заказать ремонт коттеджа у нас</h2>
+                <p class="benefits__subtitle">Гарантии, опыт и прозрачные условия</p>
+            </div>
+            
+            <div class="benefits__grid">
+                <!-- Item 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/molot.svg" alt="Опыт">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Опыт ремонта коттеджей в Москве и области</h3>
+                        <p class="benefit-card__text">Команда, которая специализируется на коттеджах и частных домах, а не только на квартирах. Отдельные бригады по внутренней отделке, фасадам, кровле и инженерным системам.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/galstuk.svg" alt="Договор">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Работаем по договору с юридическим лицом</h3>
+                        <p class="benefit-card__text">Договор на ремонт коттеджа под ключ с фиксированной сметой, сроками и гарантийными обязательствами.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/count.svg" alt="Смета">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Прозрачная смета и этапная оплата</h3>
+                        <p class="benefit-card__text">Детальная смета по видам работ и материалам, оплата по факту завершения этапов, без скрытых доплат.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/medal.svg" alt="Гарантия">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Гарантия на работы</h3>
+                        <p class="benefit-card__text">Гарантия на ремонт и отделку коттеджа до 5 лет, сервисное сопровождение после сдачи.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/worker.svg" alt="Мастера">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Собственные мастера и инженерный контроль</h3>
+                        <p class="benefit-card__text">Штат мастеров и прорабов, инженерный надзор и контроль качества скрытых работ (фото и видео-отчёты).</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">
+                        <img src="@img/benefits/human.svg" alt="Локация">
+                    </div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Работаем по Москве и всему Подмосковью</h3>
+                        <p class="benefit-card__text">Выезд сметчика в течение нескольких дней, понимание местной специфики и логистики.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stages of Repair Section -->
+    <section class="benefits benefits--stages">
+        <div class="benefits__container">
+            <div class="benefits__header">
+                <h2 class="benefits__title">Этапы ремонта коттеджа под ключ</h2>
+            </div>
+            
+            <div class="benefits__grid">
+                <!-- Step 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">1.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Заявка и консультация</h3>
+                        <p class="benefit-card__text">Вы оставляете заявку или отправляете план дома. Мы уточняем задачи и ориентировочный бюджет.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">2.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Выезд сметчика и диагностика дома</h3>
+                        <p class="benefit-card__text">Специалист выезжает в Москву или Подмосковье, выполняет обмеры, фотофиксацию и обследование конструкций и инженерии.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">3.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Смета и план работ</h3>
+                        <p class="benefit-card__text">Готовим подробную смету, график работ и при необходимости подключаем дизайнера.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">4.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Договор и подготовка площадки</h3>
+                        <p class="benefit-card__text">Подписываем договор на ремонт коттеджа, организуем завоз материалов, защиту помещений и временные коммуникации.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">5.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Черновые работы и инженерия</h3>
+                        <p class="benefit-card__text">Демонтаж, перепланировка, стяжки, штукатурка, разводка электрики, отопления, водоснабжения и вентиляции.</p>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">6.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Чистовая отделка и монтаж оборудования</h3>
+                        <p class="benefit-card__text">Малярные работы, укладка напольных покрытий, монтаж дверей, кухонь, сантехники и света.</p>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="benefit-card">
+                    <div class="benefit-card__icon">7.</div>
+                    <div class="benefit-card__content">
+                        <h3 class="benefit-card__title">Сдача объекта и гарантия</h3>
+                        <p class="benefit-card__text">Финальная приёмка по чек-листу, передача актов, фотоотчёта и гарантийных обязательств.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Will Answer Section -->
+    <section class="who-answer">
+        <div class="who-answer__container">
+            <h2 class="who-answer__title">Кто будет отвечать <br> за ремонт вашего коттеджа</h2>
+            
+            <div class="who-answer__grid">
+                <!-- Left Column: Person (Overlay Design) -->
+                <div class="who-answer__col who-answer__col--person">
+                    <img src="@img/who-will-answer/worker.webp" alt="Иван Петров" class="who-answer__bg-image">
+                    
+                    <div class="who-answer__overlay">
+                        <h3 class="who-answer__subtitle">Главный инженер проекта</h3>
+                        <p class="who-answer__name">Иван Петров, главный инженер</p>
+                        <p class="who-answer__text">
+                            Более 15 лет опыта в строительстве и ремонте коттеджей и загородных домов в Москве и области. В портфолио — десятки объектов площадью от 100 до 600 м², в том числе премиальные коттеджи в Новой Москве и на Новой Риге.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Company -->
+                <div class="who-answer__col who-answer__col--card">
+                    <div class="who-answer__header-row">
+                        <h3 class="who-answer__subtitle">КОМПАНИЯ</h3>
+                        <div class="who-answer__logo">
+                            <img src="@img/who-will-answer/main-logo-montage.svg" alt="Montage Logo">
+                        </div>
+                    </div>
+                    <div class="who-answer__content-wrapper">
+                        <p class="who-answer__text">
+                            Компания занимается ремонтом коттеджей и частных домов «под ключ» в Москве и Московской области. В штате — инженеры, прорабы, мастера по внутренней отделке, фасадам, кровле и инженерным системам. Работаем официально, с договором, сметой и гарантией.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="main-reviews">
+        <div class="main-reviews__container">
+            <h2 class="main-reviews__title">Отзывы клиентов о ремонте коттеджей</h2>
+       <div style="width:560px;height:800px;overflow:hidden;position:relative;background-color:#333333;"><iframe style="width:100%;height:100%;border-radius:12px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/172967099353?comments&theme=dark"></iframe><a href="https://yandex.ru/maps/org/d2dom/172967099353/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Д2Дом на карте Москвы — Яндекс Карты</a></div>
+    </div>
+</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
