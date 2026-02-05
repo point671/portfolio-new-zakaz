@@ -1,0 +1,125 @@
+<svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.000000" height="68.000000" fill="none">
+	<defs>
+		<g id="pixso_custom_effect_0">
+			<effect x="0.000000" y="0.000000" visibility="visible" fill="rgb(242,242,242)" style="mix-blend-mode:plus-darker" fill-opacity="1" effectType="innerShadow" stdDeviation="16" radius="0" />
+			<effect x="0.000000" y="0.000000" visibility="visible" fill="rgb(255,255,255)" style="mix-blend-mode:overlay" fill-opacity="0.5" effectType="innerShadow" stdDeviation="3" radius="0" />
+			<effect x="-1.000000" y="-1.000000" visibility="visible" fill="rgb(255,255,255)" style="mix-blend-mode:overlay" fill-opacity="1" effectType="innerShadow" stdDeviation="0.5" radius="-1" />
+			<effect x="1.000000" y="1.000000" visibility="visible" fill="rgb(255,255,255)" style="mix-blend-mode:overlay" fill-opacity="1" effectType="innerShadow" stdDeviation="0.5" radius="-1" />
+			<effect x="-1.000000" y="-1.000000" visibility="visible" fill="rgb(38,38,38)" style="mix-blend-mode:plus-lighter" fill-opacity="1" effectType="innerShadow" stdDeviation="0" radius="-0.5" />
+			<effect x="1.000000" y="1.000000" visibility="visible" fill="rgb(51,51,51)" style="mix-blend-mode:plus-lighter" fill-opacity="1" effectType="innerShadow" stdDeviation="0" radius="-0.5" />
+		</g>
+		<filter id="filter_0" width="70.000000" height="70.000000" x="-1.000000" y="-1.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_0)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="0.000000" dy="0.000000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="5.33333349" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0.94902 0 0 0 0 0.94902 0 0 0 0 0.94902 0 0 0 1 0 " />
+			<feBlend result="effect_innerShadow_1" in2="shape" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="0.000000" dy="0.000000" in="hardAlpha" />
+			<feGaussianBlur stdDeviation="1" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0 " />
+			<feBlend result="effect_innerShadow_2" in2="effect_innerShadow_1" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="-0.000000" dy="-0.000000" in="hardAlpha" />
+			<feMorphology radius="1" operator="dilate" />
+			<feOffset dx="-1.000000" dy="-1.000000" />
+			<feGaussianBlur stdDeviation="0.166666672" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
+			<feBlend result="effect_innerShadow_3" in2="effect_innerShadow_2" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="-0.000000" dy="-0.000000" in="hardAlpha" />
+			<feMorphology radius="1" operator="dilate" />
+			<feOffset dx="1.000000" dy="1.000000" />
+			<feGaussianBlur stdDeviation="0.166666672" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
+			<feBlend result="effect_innerShadow_4" in2="effect_innerShadow_3" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="-0.000000" dy="-0.000000" in="hardAlpha" />
+			<feMorphology radius="0.5" operator="dilate" />
+			<feOffset dx="-1.000000" dy="-1.000000" />
+			<feGaussianBlur stdDeviation="0" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0.14902 0 0 0 0 0.14902 0 0 0 0 0.14902 0 0 0 1 0 " />
+			<feBlend result="effect_innerShadow_5" in2="effect_innerShadow_4" mode="normal" />
+			<feColorMatrix result="hardAlpha" in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0 " />
+			<feOffset dx="-0.000000" dy="-0.000000" in="hardAlpha" />
+			<feMorphology radius="0.5" operator="dilate" />
+			<feOffset dx="1.000000" dy="1.000000" />
+			<feGaussianBlur stdDeviation="0" />
+			<feComposite k2="-1" k3="1" in2="hardAlpha" operator="arithmetic" />
+			<feColorMatrix type="matrix" values="0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 0 0.2 0 0 0 1 0 " />
+			<feBlend result="effect_innerShadow_6" in2="effect_innerShadow_5" mode="normal" />
+		</filter>
+		<clipPath id="clipPath_0">
+			<rect width="68.000000" height="68.000000" x="0.000000" y="0.000000" rx="34.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<g id="pixso_custom_effect_1">
+			<effect visibility="visible" effectType="backgroundBlur" saturation="0" stdDeviation="6" />
+			<effect visibility="visible" effectType="gaussianBlur" stdDeviation="6" />
+		</g>
+		<filter id="filter_1" width="86.000000" height="86.000000" x="-10.000000" y="-10.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_1)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feGaussianBlur stdDeviation="2" result="effect_layerBlur_1" />
+		</filter>
+		<clipPath id="outline_mask_0" transform="matrix(1,0,0,1,10,10)">
+			<path d="M-4 33C-4 12.5655 12.5655 -4 33 -4C53.4345 -4 70 12.5655 70 33C70 53.4345 53.4345 70 33 70C12.5655 70 -4 53.4345 -4 33Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		</clipPath>
+		<g id="pixso_custom_effect_2">
+			<effect visibility="visible" effectType="backgroundBlur" saturation="0" stdDeviation="5" />
+		</g>
+		<filter id="filter_2" width="66.000000" height="66.000000" x="1.000000" y="1.000000" filterUnits="userSpaceOnUse" customEffect="url(#pixso_custom_effect_2)" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix" />
+			<feBlend result="shape" in="SourceGraphic" in2="BackgroundImageFix" mode="normal" />
+		</filter>
+		<clipPath id="outline_mask_1" transform="matrix(1,0,0,1,-1,-1)">
+			<path d="M34 1C15.7746 1 1 15.7746 1 34C1 52.2254 15.7746 67 34 67C52.2254 67 67 52.2254 67 34C67 15.7746 52.2254 1 34 1ZM4.3431 46.2842C2.78103 42.513 2 38.4182 2 34C2 29.5817 2.78104 25.487 4.34313 21.7158C5.90523 17.9445 8.24838 14.4968 11.3726 11.3726C14.4968 8.24839 17.9445 5.90525 21.7157 4.34315C25.487 2.78105 29.5817 2 34 2C38.4182 2 42.513 2.78104 46.2842 4.34311C50.0555 5.90521 53.5032 8.24837 56.6274 11.3726C59.7517 14.4968 62.0948 17.9445 63.6569 21.7158C65.219 25.487 66 29.5817 66 34C66 38.4183 65.219 42.513 63.6569 46.2842C62.0948 50.0555 59.7516 53.5032 56.6274 56.6274C53.5032 59.7516 50.0555 62.0948 46.2842 63.6569C42.513 65.219 38.4183 66 34 66C29.5817 66 25.4869 65.2189 21.7156 63.6568C17.9444 62.0947 14.4968 59.7516 11.3726 56.6274C8.24836 53.5032 5.9052 50.0554 4.3431 46.2842Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		</clipPath>
+		<linearGradient id="paint_custom_gradient_0">
+			<stop stop-color="rgb(68.8061,68.8061,68.8061)" offset="0.128869072" stop-opacity="0.300000012" />
+			<stop stop-color="rgb(255,255,255)" offset="0.363807261" stop-opacity="1" />
+			<stop stop-color="rgb(0,0,0)" offset="0.631532133" stop-opacity="0.300000012" />
+			<stop stop-color="rgb(255,255,255)" offset="0.886371195" stop-opacity="1" />
+		</linearGradient>
+		<mask id="outline_mask_2">
+			<path d="M34 1C15.7746 1 1 15.7746 1 34C1 52.2254 15.7746 67 34 67C52.2254 67 67 52.2254 67 34C67 15.7746 52.2254 1 34 1ZM3.87969 46.476C2.29323 42.6459 1.5 38.4872 1.5 34C1.5 29.5127 2.29324 25.354 3.87971 21.5239C5.46622 17.6937 7.84599 14.1921 11.019 11.019C14.192 7.84603 17.6936 5.46628 21.5238 3.87977C25.3539 2.29326 29.5127 1.5 34 1.5C38.4874 1.5 42.6462 2.29327 46.4764 3.87982C50.3065 5.46633 53.808 7.84606 56.981 11.019C60.154 14.192 62.5337 17.6936 64.1202 21.5238C65.7067 25.3539 66.5 29.5127 66.5 34C66.5 38.4874 65.7067 42.6462 64.1202 46.4764C62.5337 50.3065 60.1539 53.808 56.981 56.981C53.8079 60.154 50.3063 62.5338 46.4761 64.1203C42.646 65.7068 38.4873 66.5 34 66.5C29.5127 66.5 25.3541 65.7068 21.5239 64.1203C17.6937 62.5338 14.1921 60.154 11.019 56.981C7.84598 53.8079 5.4662 50.3063 3.87969 46.476Z" fill="rgb(255,255,255)" fill-rule="evenodd" />
+		</mask>
+	</defs>
+	<g clip-path="url(#clipPath_0)" filter="url(#filter_0)" customFrame="url(#clipPath_0)">
+		<rect id="1x1 - Inst" width="68.000000" height="68.000000" x="0.000000" y="0.000000" rx="34.000000" fill="rgb(153,153,153)" style="mix-blend-mode:darken" fill-opacity="0.300000012" />
+		<rect id="1x1 - Inst" width="68.000000" height="68.000000" x="0.000000" y="0.000000" rx="34.000000" fill="rgb(51,51,51)" style="mix-blend-mode:luminosity" fill-opacity="0.449999988" />
+		<rect id="1x1 - Inst" width="68.000000" height="68.000000" x="0.000000" y="0.000000" rx="34.000000" fill="rgb(0,0,0)" style="mix-blend-mode:plus-lighter" />
+		<g data-pixso-skip-parse="true">
+			<foreignObject width="86.000000" height="86.000000" x="-10.000000" y="-10.000000">
+				<div xmlns="http://www.w3.org/1999/xhtml" style="clip-path:url(#outline_mask_0);height:100%;backdrop-filter:blur(6.000000px);width:100%;-webkit-backdrop-filter:blur(6.000000px);" />
+			</foreignObject>
+		</g>
+		<g filter="url(#filter_1)">
+			<rect id="Rectangle 4" width="74.000000" height="74.000000" x="-4.000000" y="-4.000000" rx="37.000000" fill="rgb(255,255,255)" style="mix-blend-mode:plus-lighter" fill-opacity="0.0799999982" />
+		</g>
+		<g data-pixso-skip-parse="true">
+			<foreignObject width="66.000000" height="66.000000" x="1.000000" y="1.000000">
+				<div xmlns="http://www.w3.org/1999/xhtml" style="clip-path:url(#outline_mask_1);height:100%;backdrop-filter:blur(2.500000px);width:100%;-webkit-backdrop-filter:blur(2.500000px);" />
+			</foreignObject>
+		</g>
+		<g filter="url(#filter_2)">
+			<rect id="Rectangle 5" width="66.000000" height="66.000000" x="1.000000" y="1.000000" rx="33.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+			<rect id="Rectangle 5" width="65.000000" height="65.000000" x="1.500000" y="1.500000" rx="32.500000" stroke="rgb(255,255,255)" stroke-opacity="0.00999999978" stroke-width="1.000000" />
+		</g>
+		<rect id="Rectangle 6" width="66.000000" height="66.000000" x="1.000000" y="1.000000" rx="33.000000" fill="rgb(255,255,255)" fill-opacity="0" />
+		<rect id="Rectangle 6" width="65.500000" height="65.500000" x="1.250000" y="1.250000" rx="32.750000" stroke="rgb(0,0,0)" stroke-opacity="0" stroke-width="0.500000" customGradient="url(#custom_gradient_0)" />
+		<g id="custom_gradient_0" opacity="0.300000012" angularGradient="url(#paint_custom_gradient_0); -0.250000 32.750000 32.750000 32.750000 32.750000 65.750000" mask="url(#outline_mask_2)">
+			<g>
+				<foreignObject width="66.000000" height="66.000000" x="1.000000" y="1.000000">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="background:conic-gradient(from 226.392868deg, rgb(68.8061,68.8061,68.8061) 0%, rgb(255,255,255) 23.4938%, rgb(0,0,0) 50.2663%, rgb(255,255,255) 75.7502%, rgb(68.8061,68.8061,68.8061) 100%);mask:conic-gradient(from 226.392868deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,1) 23.4938%, rgba(255,255,255,0.3) 50.2663%, rgba(255,255,255,1) 75.7502%, rgba(255,255,255,0.3) 100%);width:100%;height:100%;" />
+				</foreignObject>
+			</g>
+		</g>
+		<path id="Vector" d="M40.65 16L26.6833 16C20.6167 16 17 19.6167 17 25.6833L17 39.6333C17 45.7167 20.6167 49.3333 26.6833 49.3333L40.6333 49.3333C46.7 49.3333 50.3167 45.7167 50.3167 39.65L50.3167 25.6833C50.3333 19.6167 46.7167 16 40.65 16ZM33.6667 39.1333C30.1 39.1333 27.2 36.2333 27.2 32.6667C27.2 29.1 30.1 26.2 33.6667 26.2C37.2333 26.2 40.1333 29.1 40.1333 32.6667C40.1333 36.2333 37.2333 39.1333 33.6667 39.1333ZM43.5333 24.1333C43.45 24.3333 43.3333 24.5167 43.1833 24.6833C43.0167 24.8333 42.8333 24.95 42.6333 25.0333C42.4333 25.1167 42.2167 25.1667 42 25.1667C41.55 25.1667 41.1333 25 40.8167 24.6833C40.6667 24.5167 40.55 24.3333 40.4667 24.1333C40.3833 23.9333 40.3333 23.7167 40.3333 23.5C40.3333 23.2833 40.3833 23.0667 40.4667 22.8667C40.55 22.65 40.6667 22.4833 40.8167 22.3167C41.2 21.9333 41.7833 21.75 42.3167 21.8667C42.4333 21.8833 42.5333 21.9167 42.6333 21.9667C42.7333 22 42.8333 22.05 42.9333 22.1167C43.0167 22.1667 43.1 22.25 43.1833 22.3167C43.3333 22.4833 43.45 22.65 43.5333 22.8667C43.6167 23.0667 43.6667 23.2833 43.6667 23.5C43.6667 23.7167 43.6167 23.9333 43.5333 24.1333Z" fill="rgb(255,253,249)" fill-rule="nonzero" />
+	</g>
+</svg>

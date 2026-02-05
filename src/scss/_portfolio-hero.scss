@@ -36,80 +36,117 @@ $hero-muted: rgba(255, 253, 249, 0.6);
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding-top: rem(200); // Отступ сверху для контента (учитывая хедер)
+        justify-content: flex-start;
+        padding-top: rem(150); // Отступ сверху для контента (учитывая хедер)
         padding-bottom: rem(100);
     }
 
     // Хлебные крошки
     .breadcrumbs {
-        position: absolute;
-        top: rem(150); // Позиционирование сверху
-        left: rem(15); // Отступ слева (align with container padding)
         display: flex;
         align-items: center;
         gap: rem(10);
-        margin-bottom: rem(40);
+        margin-bottom: rem(24);
         
         @media (max-width: $mobile) {
-             top: rem(120);
+             // margin-bottom: rem(30); // Optional adjustment
         }
 
         &__link {
-            font-family: 'Involve', sans-serif;
-            font-size: rem(14);
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s ease;
 
+
+      
+            transition: color 0.3s ease;
+color: rgba(255, 255, 255, 1);
+font-family: Involve;
+font-style: Regular;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+
+
+            
             &:hover {
                 color: #fff;
             }
         }
 
         &__separator {
-            color: rgba(255, 255, 255, 0.6);
-            font-size: rem(14);
+                   transition: color 0.3s ease;
+color: rgba(255, 255, 255, 1);
+font-family: Involve;
+font-style: Regular;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+
         }
 
         &__current {
             font-family: 'Involve', sans-serif;
             font-size: rem(14);
             color: #fff;
+
+            transition: color 0.3s ease;
+color: rgba(255, 255, 255, 1);
+font-family: Involve;
+font-style: Regular;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: left;
+
+            
         }
     }
 
     // Заголовок
     &__title {
-        font-family: 'Haval', sans-serif;
-        font-weight: 300;
-        @include adaptiveValue("font-size", 64, 32);
-        line-height: 100%;
-        text-transform: uppercase;
-        margin-bottom: rem(30);
-        max-width: rem(800);
+       color: rgba(255, 255, 255, 1);
+font-family: Haval;
+font-style: Light;
+font-size: 64px;
+font-weight: 300;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: left;
+text-transform: uppercase;
+margin-bottom: rem(86);
     }
 
     // Подзаголовок
     &__subtitle {
-        font-family: 'Haval', sans-serif;
-        font-weight: 300;
-        @include adaptiveValue("font-size", 32, 20);
-        line-height: 120%;
-        text-transform: uppercase;
-        margin-bottom: rem(40);
-        max-width: rem(800);
+    color: rgba(255, 255, 255, 1);
+
+font-family: Haval;
+font-style: Light;
+font-size: 32px;
+font-weight: 300;
+line-height: 120%;
+letter-spacing: 0px;
+text-align: left;
+text-transform: uppercase;
+margin-bottom: rem(20);
     }
 
     // Текст
     &__text {
-        font-family: 'Involve', sans-serif;
-        font-weight: 400;
-        @include adaptiveValue("font-size", 24, 16);
-        line-height: 140%;
-        margin-bottom: rem(60);
-        max-width: rem(700);
-        text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+
+font-family: Haval;
+font-style: Light;
+font-size: 32px;
+font-weight: 300;
+line-height: 120%;
+letter-spacing: 0px;
+text-align: left;
+text-transform: uppercase;
+margin-bottom: rem(47);
     }
 
     // Статистика
@@ -145,20 +182,26 @@ $hero-muted: rgba(255, 253, 249, 0.6);
     }
 
     &__number {
-        font-family: 'Haval', sans-serif; // Looks more like Haval in the screen for the big numbers
-        font-weight: 300; 
-        @include adaptiveValue("font-size", 64, 40); // Larger size
-        line-height: 100%;
-        white-space: nowrap;
-        color: #fff;
+color: rgba(255, 255, 255, 1);
+
+font-family: Haval;
+font-style: Light;
+font-size: 48px;
+font-weight: 300;
+line-height: 110%;
+letter-spacing: 0.3px;
+text-align: left;
     }
 
     &__label {
-        font-family: 'Involve', sans-serif;
-        font-size: rem(14);
-        color: rgba(255, 255, 255, 0.8);
-        text-transform: lowercase;
-        margin-top: rem(5);
+   color: rgba(255, 255, 255, 1);
+font-family: Involve;
+font-style: Regular;
+font-size: 16px;
+font-weight: 400;
+line-height: 110%;
+letter-spacing: 0.3px;
+text-align: left;
     }
 }
 
@@ -173,31 +216,28 @@ $hero-muted: rgba(255, 253, 249, 0.6);
 }
 
 .hero-portfolio__icon {
-    width: rem(50); // Slightly smaller based on visual estimate from screenshot (was 60)
-    height: rem(50);
+    width: rem(74);
+    height: rem(74);
     border-radius: 50%;
     
-    // Exact style match attempt
-    background: rgba(41, 45, 50, 0.9); // Dark background
-    border: 1px solid rgba(255, 255, 255, 1); // Looks like a solid white thinner border or high opacity
-    // Or maybe it's just a normal border. In the screenshot it looks crisp.
-    // Let's try 0.5 opacity if 1 is too much, but user said "start border here". 
-    // Actually typically these are 0.2 - 0.4.
-    // Let's look at the stats block again. 
-    border: 1px solid rgba(255, 255, 255, 0.4); 
+    background: rgba(41, 45, 50, 0.9);
+    
+    // Glassmorphism border effect
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        inset -1px -1px 0px 0px rgba(51, 51, 51, 0.5), 
+        inset 1px 1px 0px 0px rgba(255, 255, 255, 0.3),
+        0px 4px 24px -1px rgba(0, 0, 0, 0.2);
     
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    
-    // Add shadow to match depth
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 
     img {
-        width: rem(24);
-        height: rem(24);
+        width: rem(33);
+        height: rem(33);
         object-fit: contain;
     }
 
@@ -223,24 +263,47 @@ $hero-muted: rgba(255, 253, 249, 0.6);
 
 @media (max-width: $mobile) {
     .hero-portfolio {
-        min-height: auto;
-        padding-bottom: rem(60);
+        min-height: 100svh;
+        padding-bottom: rem(40);
 
         &__overlay {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
         }
 
         &__container {
-             padding-top: rem(180); // Increased from 120 to prevent overlap with breadcrumbs
+             padding-top: rem(120); 
+             display: flex;
+             flex-direction: column;
+             justify-content: flex-start; // Align content to top (text will push bottom)
+        }
+        
+        // Compact margins for mobile
+        .breadcrumbs {
+            margin-bottom: rem(24);
+        }
+        
+        &__title {
+            margin-bottom: rem(15);
+        }
+        
+        &__subtitle {
+             margin-bottom: rem(20);
+        }
+        
+        &__text {
+            margin-top: auto; // This pushes the text and stats to the bottom
+            margin-bottom: rem(20);
+            line-height: 130%; 
         }
 
         &__stats {
+            margin-top: 0; // Reset, pushed by text
             display: flex;
-            flex-direction: row; // Force row
-            align-items: stretch; // Match height
-            flex-wrap: nowrap; // 禁止 wrapping
-            gap: rem(10); // Reduce gap
-            width: 100%; // Full width
+            flex-direction: row; 
+            align-items: stretch;
+            flex-wrap: nowrap;
+            gap: rem(10);
+            width: 100%;
         }
 
         // Target items inside the mobile query to override global styles
