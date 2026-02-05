@@ -43,6 +43,7 @@ $hero-muted: rgba(255, 253, 249, 0.6);
 
     // Хлебные крошки
     .breadcrumbs {
+        margin-top: 90px;
         display: flex;
         align-items: center;
         gap: rem(10);
@@ -253,29 +254,6 @@ text-align: left;
     }
 }
 
-// Адаптив по высоте для ноутбуков
-@media (max-width: $mobile) {
-    .hero-portfolio {
-        &__container {
-            padding-top: rem(130);
-            padding-bottom: rem(60);
-        }
-        
-        &__floating {
-            bottom: rem(30);
-        }
-
-        &__title {
-            margin-bottom: rem(20);
-            font-size: rem(48); // Slightly smaller title to fit
-        }
-        
-        &__subtitle {
-            margin-bottom: rem(30);
-        }
-    }
-}
-
 // Адаптив
 @media (max-width: $tablet) {
     .hero-portfolio {
@@ -292,22 +270,24 @@ text-align: left;
 @media (max-width: $mobile) {
     .hero-portfolio {
         min-height: 100svh;
-        padding-bottom: rem(40);
+
 
         &__overlay {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
         }
 
         &__container {
-             padding-top: rem(120); 
+             min-height: 100svh; 
+             padding-top: rem(0); // Reduced to fit content
              display: flex;
              flex-direction: column;
-             justify-content: flex-start; // Align content to top (text will push bottom)
+             justify-content: flex-start; 
+                 padding-bottom: 0rem;
         }
         
         // Compact margins for mobile
         .breadcrumbs {
-            margin-bottom: rem(24);
+            margin-bottom: rem(15); // Tighter
 
             &__link,
             &__separator,
@@ -315,7 +295,7 @@ text-align: left;
                 color: rgba(255, 255, 255, 1);
                 font-family: 'Involve', sans-serif;
                 font-style: normal;
-                font-size: 16px; // Using px as specifically requested, though rem is better usually. User asked for 16px explicitly.
+                font-size: 16px; 
                 font-weight: 400;
                 line-height: 19px;
                 letter-spacing: 0%;
@@ -324,48 +304,50 @@ text-align: left;
         }
         
         &__title {
-            margin-bottom: rem(15);
+            margin-bottom: rem(10); // Tighter
+            font-size: 48px;
         }
         
         &__subtitle {
-             margin-bottom: rem(20);
-
-
-font-size: 24px;
-
- 
+             margin-bottom: rem(15);
+             font-size: 24px;
         }
         
         &__text {
-            margin-top: auto; // This pushes the text and stats to the bottom
-            margin-bottom: rem(20);
+            margin-top: auto; // This is critical - it pushes text + stats to bottom
+            margin-bottom: rem(15);
             line-height: 130%; 
             font-size: 16px;
             font-family: Involve;
         }
 
         &__stats {
-            margin-top: 0; // Reset, pushed by text
+            margin-top: 0; 
             display: flex;
             flex-direction: row; 
             align-items: stretch;
             flex-wrap: nowrap;
             gap: rem(10);
             width: 100%;
+            margin-bottom: rem(75);
         }
 
         // Target items inside the mobile query to override global styles
         .stats__item {
-            padding: rem(15) rem(20); // Adjusted padding
+            padding: rem(12) rem(15); // Reduced padding
             min-width: 0; 
-            width: auto; // Content width
-            flex: 0 0 auto; // Do not grow
-            
-            // Adjust border radius for mobile if needed (looks like 34px in Pixso, keeping global is fine)
+            flex: 1 1 auto; // Allow grow AND shrink
+            max-width: 50%; // Limit max width
         }
 
         .stats__number {
-            @include adaptiveValue("font-size", 48, 36); // Slightly smaller on mobile if needed
+            font-size: clamp(28px, 8vw, 48px); // Fluid font size
+            white-space: nowrap;
+        }
+        
+        .stats__label {
+            font-size: clamp(12px, 3.5vw, 16px); // Fluid label size
+            line-height: 120%;
         }
     }
 
