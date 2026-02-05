@@ -66,7 +66,7 @@ line-height: 24px;
 letter-spacing: 0%;
 text-align: left;
 
-
+            
             
             &:hover {
                 color: #fff;
@@ -132,6 +132,11 @@ letter-spacing: 0px;
 text-align: left;
 text-transform: uppercase;
 margin-bottom: rem(20);
+
+
+
+
+
     }
 
     // Текст
@@ -248,6 +253,29 @@ text-align: left;
     }
 }
 
+// Адаптив по высоте для ноутбуков
+@media (max-width: $mobile) {
+    .hero-portfolio {
+        &__container {
+            padding-top: rem(130);
+            padding-bottom: rem(60);
+        }
+        
+        &__floating {
+            bottom: rem(30);
+        }
+
+        &__title {
+            margin-bottom: rem(20);
+            font-size: rem(48); // Slightly smaller title to fit
+        }
+        
+        &__subtitle {
+            margin-bottom: rem(30);
+        }
+    }
+}
+
 // Адаптив
 @media (max-width: $tablet) {
     .hero-portfolio {
@@ -280,6 +308,19 @@ text-align: left;
         // Compact margins for mobile
         .breadcrumbs {
             margin-bottom: rem(24);
+
+            &__link,
+            &__separator,
+            &__current {
+                color: rgba(255, 255, 255, 1);
+                font-family: 'Involve', sans-serif;
+                font-style: normal;
+                font-size: 16px; // Using px as specifically requested, though rem is better usually. User asked for 16px explicitly.
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0%;
+                text-align: left;
+            }
         }
         
         &__title {
@@ -288,12 +329,19 @@ text-align: left;
         
         &__subtitle {
              margin-bottom: rem(20);
+
+
+font-size: 24px;
+
+ 
         }
         
         &__text {
             margin-top: auto; // This pushes the text and stats to the bottom
             margin-bottom: rem(20);
             line-height: 130%; 
+            font-size: 16px;
+            font-family: Involve;
         }
 
         &__stats {
