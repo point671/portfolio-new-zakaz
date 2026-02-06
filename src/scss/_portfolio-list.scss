@@ -44,8 +44,13 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#670009), to(#670009)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#B58287), to(#802B32)) border-box;
     background: linear-gradient(#670009, #670009) padding-box, linear-gradient(to bottom, #B58287, #802B32) border-box;
         &:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: #fff;
+               background: -webkit-gradient(linear, left top, left bottom, from(#7a0110), to(#7a0110)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#C9A0A5), to(#903B42)) border-box;
+    background: linear-gradient(#7a0110, #7a0110) padding-box, linear-gradient(to bottom, #C9A0A5, #903B42) border-box;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
         }
     }
 }
