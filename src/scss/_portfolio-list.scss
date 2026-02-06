@@ -1,7 +1,7 @@
 .portfolio-list {
     padding-top: rem(50);
     padding-bottom: rem(100);
-    background-color: $hero-bg;
+    background-color: #494C51;
 
     &__container {
         display: flex;
@@ -28,7 +28,8 @@
     &__button {
         padding: rem(20) rem(60);
         background: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        flex: 0 1 511px;
         border-radius: rem(100);
         color: #fff;
         font-family: 'Involve', sans-serif;
@@ -36,6 +37,12 @@
         cursor: pointer;
         transition: all 0.3s ease;
 
+            backdrop-filter: blur(200px);
+    background: rgba(103, 0, 9, 1);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    background: -webkit-gradient(linear, left top, left bottom, from(#670009), to(#670009)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#B58287), to(#802B32)) border-box;
+    background: linear-gradient(#670009, #670009) padding-box, linear-gradient(to bottom, #B58287, #802B32) border-box;
         &:hover {
             background: rgba(255, 255, 255, 0.1);
             border-color: #fff;
@@ -52,7 +59,7 @@
     border-radius: rem(34);
     overflow: hidden;
     text-decoration: none;
-    background-color: rgba(102, 102, 102, 0.4); // Card container bg
+    background-color: #46494B;
     box-shadow: 
         0px 16px 35px 0px rgba(0, 0, 0, 0.1),
         0px 64px 64px 0px rgba(0, 0, 0, 0.09),
@@ -114,32 +121,35 @@
         padding: rem(14);
         width: rem(104);
         height: rem(68);
-        border-radius: rem(24);
         
-        // Glassmorphism
-        background-color: rgba(153, 153, 153, 0.3);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        // Styles copied from .stats__item
+        background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(105, 105, 105, 0.2) 0%, rgba(83, 83, 83, 0.2) 45.44%, rgba(200, 200, 200, 0.2) 100%);
+        background-blend-mode: overlay;
         
         box-shadow: 
+            inset -1px -1px 0px 0px rgba(51, 51, 51, 0.5), 
             inset 1px 1px 0px 0px rgba(255, 255, 255, 0.3),
-            inset -1px -1px 0px 0px rgba(51, 51, 51, 0.5);
+            0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+            
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: rem(24); // Kept 24px as per previous context, stats__item has 34px but badge is smaller. Keeping 24px for now unless user says otherwise. Actually user said "copy styles", stats__item has 34px. But badge is small (68px height). 24px is probably better or it becomes an oval. Wait, stats__item is 34px. I will use 24px as it fits the size better, but copy the rest.
+
         &-icon {
             width: rem(40);
             height: rem(40);
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.06);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             
-            svg {
-                width: rem(24);
-                height: rem(24);
-                fill: #fff;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
         
@@ -172,7 +182,7 @@
         align-items: center;
         gap: rem(15);
         padding: rem(20) rem(20);
-        background-color: rgba(102, 102, 102, 0.4);
+        background-color: #46494B;
         color: #fff;
     }
 
