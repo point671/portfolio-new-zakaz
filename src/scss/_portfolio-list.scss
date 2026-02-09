@@ -71,6 +71,10 @@
         0px 144px 86px 0px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 
+    @media (max-width: 440px) {
+        height: rem(408);
+    }
+
     &:hover {
         transform: translateY(-5px);
         
@@ -87,6 +91,14 @@
         height: rem(491);
         border-radius: rem(34) rem(34) rem(34) rem(34);
         overflow: hidden;
+
+        @media (max-width: $tablet) {
+             height: rem(360);
+        }
+
+        @media (max-width: 440px) {
+            height: rem(338);
+        }
         
         img {
             width: 100%;
