@@ -139,20 +139,34 @@
         width: rem(104);
         height: rem(68);
         
-        // Styles copied from .stats__item
-        background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(105, 105, 105, 0.2) 0%, rgba(83, 83, 83, 0.2) 45.44%, rgba(200, 200, 200, 0.2) 100%);
-        background-blend-mode: overlay;
-        
+        // Styles from Figma provided by user - ADJUSTED for better visibility
         box-shadow: 
-            inset -1px -1px 0px 0px rgba(51, 51, 51, 0.5), 
-            inset 1px 1px 0px 0px rgba(255, 255, 255, 0.3),
-            0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+            // Reduced internal black shadows greatly to avoid "black border" look
+            inset 1px 1px 0px -0.5px rgba(51, 51, 51, 0.2),
+            inset -1px -1px 0px -0.5px rgba(38, 38, 38, 0.2),
             
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+            // White highlights - kept subtle but visible
+            inset 1px 1px 0.5px -1px rgba(255, 255, 255, 0.5),
+            inset -1px -1px 0.5px -1px rgba(255, 255, 255, 0.5),
+            
+            // Inner glow - increase slightly for definition
+            inset 0px 0px 3px 0px rgba(255, 255, 255, 0.15), 
+            inset 0px 0px 16px 0px rgba(242, 242, 242, 0.1);
         
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: rem(24); // Kept 24px as per previous context, stats__item has 34px but badge is smaller. Keeping 24px for now unless user says otherwise. Actually user said "copy styles", stats__item has 34px. But badge is small (68px height). 24px is probably better or it becomes an oval. Wait, stats__item is 34px. I will use 24px as it fits the size better, but copy the rest.
+        // Exact background layers from user request
+        background: 
+            linear-gradient(rgba(153, 153, 153, 0.3), rgba(153, 153, 153, 0.3)), // Top layer
+            linear-gradient(rgba(51, 51, 51, 0.45), rgba(51, 51, 51, 0.45)),     // Middle layer
+            rgba(0, 0, 0, 1);                                                     // Base layer 
+        
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        
+        background-color: transparent; 
+        
+        border-radius: rem(24);
+        
+        border: 1px solid rgba(255, 255, 255, 0.2);
 
         &-icon {
             width: rem(40);
@@ -201,6 +215,7 @@
         padding: rem(20) rem(20);
         background-color: #46494B;
         color: #fff;
+        
     }
 
     &__link-text {
