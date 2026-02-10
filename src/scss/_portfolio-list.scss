@@ -3,7 +3,40 @@
     padding-bottom: rem(100);
     background-color: #494C51;
 
+    &_archive {
+        position: relative;
+        
+        &__bg {
+            position: absolute;
+           top: -707px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: rem(2733);
+            height: rem(2317);
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.4;
+            pointer-events: none;
+            border-radius: rem(34);
+
+            
+            // Mask to fade out the top 200px
+            mask-image: linear-gradient(to bottom, transparent 0%, black 200px, black 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 200px, black 100%);
+            
+
+            @media (max-width: $mobile) {
+            top: -350px;
+    left: -560px;
+            }
+       
+       
+        }
+    }
+
     &__container {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         gap: rem(40);
@@ -230,8 +263,7 @@
 
 
             &_archive {
-                        align-items: left !important;
-                        
+                align-items: flex-start !important;
             }
         }
     }
