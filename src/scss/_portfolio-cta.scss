@@ -1,0 +1,233 @@
+// ===================================
+// Portfolio CTA — "Понравились наши работы?"
+// ===================================
+$cta-accent: rgba(103, 0, 9, 1);         // dark red for buttons
+$cta-accent-hover: rgba(130, 5, 15, 1);
+$cta-text: #fff;
+$cta-text-muted: rgba(255, 255, 255, 0.6);
+$cta-placeholder: rgba(255, 255, 255, 0.5);
+$cta-glass-bg: rgba(255, 255, 255, 0.15);
+$cta-glass-border-start: rgba(255, 255, 255, 0.59);
+$cta-glass-border-end: rgba(255, 255, 255, 0);
+$cta-input-bg: rgba(255, 255, 255, 0.08);
+$cta-section-bg: rgba(103, 0, 9, 0.15);
+
+.portfolio-cta {
+    position: relative;
+    @include adaptiveValue(padding-top, 148, 60);
+    @include adaptiveValue(padding-bottom, 148, 60);
+    background-color: #32262C;
+    border-radius: rem(60);
+    overflow: hidden;
+
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    &__title {
+        font-family: 'Haval', sans-serif;
+        font-weight: 300;
+        @include adaptiveValue(font-size, 32, 22);
+        line-height: 120%;
+        text-transform: uppercase;
+        color: $cta-text;
+        text-align: center;
+        @include adaptiveValue(margin-bottom, 32, 20);
+    }
+
+    &__subtitle {
+        font-family: 'Involve', sans-serif;
+        font-weight: 600;
+        font-style: oblique;
+        @include adaptiveValue(font-size, 24, 16);
+        line-height: 133%;
+        color: $cta-text-muted;
+        text-align: center;
+        max-width: rem(700);
+        @include adaptiveValue(margin-bottom, 48, 32);
+    }
+
+    &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Involve', sans-serif;
+        font-weight: 400;
+        @include adaptiveValue(font-size, 24, 18);
+        color: $cta-text;
+        background-color: $cta-accent;
+        border: none;
+        cursor: pointer;
+        border-radius: rem(30);
+        @include adaptiveValue(padding-top, 18, 14);
+        @include adaptiveValue(padding-bottom, 18, 14);
+        @include adaptiveValue(padding-left, 60, 40);
+        @include adaptiveValue(padding-right, 60, 40);
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: $cta-accent-hover;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    // ============================
+    // Glass Form
+    // ============================
+    &__form-wrapper {
+        @include adaptiveValue(margin-top, 100, 40);
+        width: 100%;
+        max-width: rem(786);
+        position: relative;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue(gap, 24, 16);
+        background: $cta-glass-bg;
+        border-radius: rem(60);
+        @include adaptiveValue(padding, 60, 24);
+
+    }
+
+    &__form-row {
+        display: flex;
+        gap: rem(16);
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+
+    // Field wrapper — holds the gradient border ::before
+    &__field {
+        position: relative;
+        border-radius: rem(30);
+        width: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+
+        &:focus-within {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        // Gradient border — fades at top-right and bottom-left
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            border: 1.5px solid transparent;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.5) 0%, 
+                rgba(255, 255, 255, 0.15) 40%, 
+                transparent 50%, 
+                rgba(255, 255, 255, 0.15) 60%, 
+                rgba(255, 255, 255, 0.5) 100%
+            ) border-box;
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: 
+                linear-gradient(#fff 0 0) padding-box, 
+                linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        &--textarea {
+            border-radius: rem(24);
+        }
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        font-family: 'Involve', sans-serif;
+        font-weight: 400;
+        @include adaptiveValue(font-size, 20, 16);
+        color: $cta-text;
+        background: transparent;
+        border: none;
+        border-radius: rem(30);
+        @include adaptiveValue(padding-top, 16, 14);
+        @include adaptiveValue(padding-bottom, 16, 14);
+        @include adaptiveValue(padding-left, 24, 18);
+        @include adaptiveValue(padding-right, 24, 18);
+        outline: none;
+
+        &::placeholder {
+            color: $cta-placeholder;
+        }
+    }
+
+    &__textarea {
+        resize: vertical;
+        min-height: rem(200);
+        border-radius: rem(24);
+    }
+
+    &__form-actions {
+        display: flex;
+        justify-content: flex-end;
+        @include adaptiveValue(margin-top, 8, 4);
+    }
+
+    &__submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Involve', sans-serif;
+        font-weight: 400;
+        @include adaptiveValue(font-size, 24, 18);
+        color: $cta-text;
+        background-color: $cta-accent;
+        border: none;
+        cursor: pointer;
+        border-radius: rem(30);
+        @include adaptiveValue(padding-top, 18, 14);
+        @include adaptiveValue(padding-bottom, 18, 14);
+        @include adaptiveValue(padding-left, 40, 30);
+        @include adaptiveValue(padding-right, 40, 30);
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+
+
+
+        &:hover {
+            background-color: $cta-accent-hover;
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}
