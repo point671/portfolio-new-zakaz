@@ -32,6 +32,45 @@
        
        
         }
+
+        // ===== Mobile: Stacked "deck of cards" layout =====
+        @media (max-width: $mobile) {
+            .portfolio-list__grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                position: relative;
+                padding-bottom: rem(20); // Add some bottom padding
+
+                .portfolio-card {
+                    width: 100%;
+                    position: relative;
+                    transition: transform 0.3s ease;
+                    
+                    // Shadow to separate cards
+                    box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
+
+                    // Each card overlaps the bottom of the previous one
+                    // Card height is ~408px on mobile. 
+                    // To show ~30px of the previous card top, we pull up by (408 - 30) = 378px
+                    &:not(:first-child) {
+                        margin-top: rem(-378);
+                    }
+
+                    // Explicitly increasing z-index so later cards are ON TOP
+                    &:nth-child(1) { z-index: 1; }
+                    &:nth-child(2) { z-index: 2; }
+                    &:nth-child(3) { z-index: 3; }
+                    &:nth-child(4) { z-index: 4; }
+
+                    &:hover {
+                        transform: translateY(-10px);
+                         z-index: 10; // Bring to front on hover (optional, user might like it interaction)
+                    }
+                }
+            }
+        }
     }
 
     &__container {
@@ -39,7 +78,43 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
-        gap: rem(40);
+        // gap: rem(40); // Removed as per user request, interferes with spacing
+    }
+
+    &__title {
+        color: rgba(186, 186, 186, 1);
+        font-family: 'Haval', sans-serif;
+        font-style: normal; // Changed from Light as it might not be supported directly, font-weight handles it
+        font-size: rem(48);
+        font-weight: 300;
+        line-height: 100%;
+        letter-spacing: 0px;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: rem(30); // Changed to 30px as requested
+        
+        @media (max-width: $mobile) {
+            font-size: rem(32); // Responsive size
+        }
+    }
+
+    &__subtitle {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: 'Involve', sans-serif;
+        font-style: italic; // Mapping 'SemiBold Oblique' to standard italic style if specific font isn't available, or rely on font-face
+        font-size: rem(24);
+        font-weight: 400; // User specified 400, but 'SemiBold' implies 600. Using 400 as explicitly requested.
+        line-height: rem(29);
+        letter-spacing: 0%;
+        text-align: left;
+        max-width: rem(800); // Optional: restrict width for better readability
+        margin-bottom: rem(75); // 75px on desktop
+        
+        @media (max-width: $mobile) {
+            font-size: rem(18);
+            line-height: 1.3;
+            margin-bottom: rem(30); // 30px on mobile
+        }
     }
 
     &__grid {
@@ -204,6 +279,11 @@
 
 
 
+        @media (max-width: $mobile) {
+            top:0;
+
+        }
+
         
         // Modifier for archive section - icon on the right
 
@@ -212,6 +292,11 @@
               left: auto;
                 right: 1.25rem;
                   background: rgba(136, 124, 102, 1);
+
+                  @media (max-width: $mobile) {
+                        padding-top: 0px;
+                        right:0;
+                  }
         }
 
 
