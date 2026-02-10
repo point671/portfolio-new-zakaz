@@ -167,6 +167,29 @@
         border-radius: rem(24);
         
         border: 1px solid rgba(255, 255, 255, 0.2);
+        
+
+
+
+        
+        // Modifier for archive section - icon on the right
+
+
+        &_archive{
+              left: auto;
+                right: 1.25rem;
+                  background: rgba(136, 124, 102, 1);
+        }
+
+
+
+
+
+
+
+        &--reverse {
+            flex-direction: row-reverse;
+        }
 
         &-icon {
             width: rem(40);
@@ -190,6 +213,8 @@
             align-items: center;
             color: #fff;
             line-height: 1.2;
+
+
             
             span:first-child {
                 font-family: 'Involve', sans-serif;
@@ -201,6 +226,12 @@
                 font-family: 'Involve', sans-serif;
                 font-size: rem(14);
                 color: rgba(255, 255, 255, 0.5);
+            }
+
+
+            &_archive {
+                        align-items: left !important;
+                        
             }
         }
     }
