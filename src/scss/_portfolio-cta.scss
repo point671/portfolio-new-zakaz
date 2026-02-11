@@ -19,7 +19,22 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
     background-color: #32262C;
     border-radius: rem(60);
     overflow: hidden;
+    z-index: 5;
+    margin-top: rem(-60);
 
+    // Glow effect (Ellipse)
+    &::before {
+       content: "";
+    position: absolute;
+    top: -15%;
+    left: 84%;
+    transform: translate(-50%, -50%);
+    width: 843px;
+    height: 843px;
+    background: url(../img/portfolio/Ellipse22.png) center / contain no-repeat;
+    pointer-events: none;
+    z-index: 1;
+    }
 
 
     &__container {

@@ -8,14 +8,14 @@
         
         &__bg {
             position: absolute;
-           top: -707px;
+           top: -430px;
             left: 50%;
             transform: translateX(-50%);
             width: rem(2733);
             height: rem(2317);
             object-fit: cover;
             z-index: 1;
-            opacity: 0.4;
+            opacity: 1;
             pointer-events: none;
             border-radius: rem(34);
 
@@ -31,6 +31,17 @@
             }
        
        
+        }
+
+        // Darkening overlay for archive cards
+        .portfolio-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            pointer-events: none;
+            border-radius: inherit;
+            background: rgba(0, 0, 0, 0.4);
         }
 
         // ===== Mobile: Stacked "deck of cards" layout =====
@@ -121,16 +132,18 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: rem(20);
+        margin-bottom: rem(75);
 
         @media (max-width: $mobile) {
             grid-template-columns: 1fr;
+            margin-bottom: rem(36);
         }
     }
 
     &__more {
         display: flex;
         justify-content: center;
-        margin-top: rem(20);
+       
     }
 
     &__button {
@@ -167,6 +180,7 @@
 // PORTFOLIO CARD - Exactly matching design
 // ===========================================
 .portfolio-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     border-radius: rem(34);
@@ -182,6 +196,7 @@
     @media (max-width: 440px) {
         height: rem(408);
     }
+
 
     &:hover {
         transform: translateY(-5px);
@@ -239,7 +254,7 @@
         position: absolute;
         top: rem(20);
         left: rem(20);
-        z-index: 3;
+        z-index: 20;
         display: flex;
         align-items: center;
         gap: rem(8);
