@@ -1,8 +1,11 @@
 .portfolio-list {
     padding-top: rem(50);
-    padding-bottom: rem(100);
+    padding-bottom: rem(200);
     background-color: #494C51;
 
+    @media (max-width: $mobile) {
+        padding-bottom: rem(100);
+    }
     &_archive {
         position: relative;
         
@@ -172,6 +175,11 @@
     transform: translateY(-2px);
     -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
     box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+        }
+
+
+        @media (max-width: $mobile) {
+            display: none;  
         }
     }
 }
