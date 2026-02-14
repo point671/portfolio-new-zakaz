@@ -64,7 +64,7 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
         line-height: 133%;
         color: $cta-text-muted;
         text-align: center;
-        max-width: rem(700);
+  
         @include adaptiveValue(margin-bottom, 48, 32);
     }
 
@@ -117,7 +117,7 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
     // Glass Form
     // ============================
     &__form-wrapper {
-        @include adaptiveValue(margin-top, 100, 40);
+        margin-top: clamp(rem(75), 10vw, rem(150));
         width: 100%;
         max-width: rem(786);
         position: relative;
