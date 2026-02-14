@@ -20,7 +20,7 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
     border-radius: rem(60);
     overflow: hidden;
     z-index: 5;
-    margin-top: rem(-60);
+    margin-top: rem(-140);
 
     // Glow effect (Ellipse)
     &::before {
@@ -54,6 +54,10 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
         color: $cta-text;
         text-align: center;
         @include adaptiveValue(margin-bottom, 32, 20);
+        
+        @media (max-width: $mobile) {
+            text-align: left;
+        }
     }
 
     &__subtitle {
@@ -66,6 +70,10 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
         text-align: center;
   
         @include adaptiveValue(margin-bottom, 48, 32);
+
+        @media (max-width: $mobile) {
+            text-align: left;
+        }
     }
 
     &__button {
@@ -121,6 +129,20 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
         width: 100%;
         max-width: rem(786);
         position: relative;
+
+        &::before{
+               content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 60px;
+    padding: 2px;
+    background: linear-gradient(110.1deg, rgba(255, 255, 255, 0.59) -2.17%, rgba(255, 255, 255, 0) 62.56%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+        }
+      
     }
 
     &__form {
@@ -131,7 +153,7 @@ $cta-section-bg: rgba(103, 0, 9, 0.15);
         @include adaptiveValue(gap, 24, 16);
         background: $cta-glass-bg;
         border-radius: rem(60);
-        @include adaptiveValue(padding, 60, 24);
+        padding: clamp(rem(20), 4vw, rem(56)) clamp(rem(20), 2.5vw, rem(33)) clamp(rem(20), 4vw, rem(60));
 
     }
 
