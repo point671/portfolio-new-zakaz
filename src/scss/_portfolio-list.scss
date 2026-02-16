@@ -448,3 +448,129 @@
     border-radius: 50px;
     margin-top: -55px;
 }
+
+// ===========================================
+// PORTFOLIO FILTER
+// ===========================================
+.portfolio-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+       backdrop-filter: blur(6px);
+    background: rgba(51, 51, 51, 0.45);
+    backdrop-filter: blur(6px); // Glassmorphism
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: rem(30);
+    padding: rem(10); // Spacing for inner items
+    margin-bottom: rem(40);
+    
+    // Inner shadows and effects from Pixso
+    
+
+    @media (max-width: $mobile) {
+        flex-direction: column;
+        align-items: flex-start; // Changed from stretch to prevent weird sizing
+        gap: rem(15);
+        padding: rem(15);
+        border-radius: rem(24);
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        gap: rem(10); // Matches desktop container padding
+        width: 100%; // Ensure full width for scrolling
+            justify-content: space-between;
+        @media (max-width: $mobile) {
+            gap: rem(15); // Matches mobile container padding
+            overflow-x: auto;
+            padding-bottom: rem(5); // Reduced padding
+            margin-right: 0; // Reset
+            padding-right: rem(5);
+            
+            // Ensure items don't shrink
+            flex-shrink: 0;
+            
+            // Hide scrollbar
+            -ms-overflow-style: none;  
+            scrollbar-width: none;  
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        background: transparent;
+        border: none;
+        padding: rem(15) rem(30);
+        border-radius: rem(100); // Pill shape
+        font-family: 'Involve', sans-serif;
+        font-size: rem(20);
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6); // Inactive text color
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        &_active {
+            background: #fff;
+            color: #000; // Active text color
+            
+            &:hover {
+                background: #f0f0f0;
+                color: #000;
+            }
+        }
+        
+        @media (max-width: $mobile) {
+             font-size: rem(16);
+             padding: rem(12) rem(24);
+        }
+    }
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        padding: rem(10) rem(20);
+        cursor: pointer;
+        
+        
+        @media (max-width: $mobile) {
+            width: 100%;
+            justify-content: space-between; // Spread apart to fill width or maybe just flex-end
+            padding: rem(5) 0 0 0; // Reset padding
+            border-top: 1px solid rgba(255,255,255,0.1); // Optional separator? Or just spacing
+            margin-top: rem(5);
+        }
+
+        &-current {
+            font-family: 'Involve', sans-serif;
+            font-size: rem(20);
+            color: #fff;
+                white-space: nowrap;
+            @media (max-width: $mobile) {
+                font-size: rem(16);
+            }
+        }
+
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+             
+             // Sorting active state rotation
+             &.active {
+                 transform: rotate(180deg);
+             }
+        }
+    }
+}
