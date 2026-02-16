@@ -20,6 +20,9 @@
     border-radius: 60px;
     z-index: 33;
     margin-top: -55px;
+    @media (max-width: $mobile) {
+        padding-top: rem(90);
+    }
         &::before {
                 content: "";
     position: absolute;
@@ -467,7 +470,7 @@
     // Inner shadows and effects from Pixso
     
 
-    @media (max-width: $mobile) {
+    @media (max-width: 1100px) {
         flex-direction: column;
         align-items: flex-start; // Changed from stretch to prevent weird sizing
         gap: rem(15);
@@ -480,16 +483,16 @@
         align-items: center;
         gap: rem(10); // Matches desktop container padding
         width: 100%; // Ensure full width for scrolling
+        
+        @media (max-width: 1100px) {
             justify-content: space-between;
-        @media (max-width: $mobile) {
-            gap: rem(15); // Matches mobile container padding
-            overflow-x: auto;
+            flex-wrap: wrap; // Allow wrapping on mobile
+            gap: rem(0); // Matches mobile container padding
+            row-gap: rem(5);
+            // Removed overflow-x: auto as user requested wrapping layout
             padding-bottom: rem(5); // Reduced padding
             margin-right: 0; // Reset
             padding-right: rem(5);
-            
-            // Ensure items don't shrink
-            flex-shrink: 0;
             
             // Hide scrollbar
             -ms-overflow-style: none;  
@@ -503,15 +506,23 @@
     &__item {
         background: transparent;
         border: none;
-        padding: rem(15) rem(30);
+        padding: rem(12) rem(24);
         border-radius: rem(100); // Pill shape
+        color: #fff; // Changed from rgba(255, 255, 255, 1) for brevity
+
         font-family: 'Involve', sans-serif;
-        font-size: rem(20);
+        font-style: normal; // Was 'Regular' which is invalid
+        font-size: clamp(rem(16), 0.5vw + rem(14), rem(20));
         font-weight: 400;
-        color: rgba(255, 255, 255, 0.6); // Inactive text color
+        line-height: rem(24);
+        letter-spacing: 0;
+        text-align: left;
+
+        
         cursor: pointer;
         transition: all 0.3s ease;
         white-space: nowrap;
+        flex-shrink: 0; // Prevent squashing on small screens
 
         &:hover {
             color: #fff;
@@ -528,9 +539,14 @@
             }
         }
         
-        @media (max-width: $mobile) {
-             font-size: rem(16);
-             padding: rem(12) rem(24);
+        @media (max-width: 1100px) {
+             padding: rem(10) rem(16);
+        }
+
+        &:first-child {
+            @media (max-width: 1100px) {
+                order: -2;
+            }
         }
     }
 
@@ -542,22 +558,22 @@
         cursor: pointer;
         
         
-        @media (max-width: $mobile) {
-            width: 100%;
-            justify-content: space-between; // Spread apart to fill width or maybe just flex-end
-            padding: rem(5) 0 0 0; // Reset padding
-            border-top: 1px solid rgba(255,255,255,0.1); // Optional separator? Or just spacing
-            margin-top: rem(5);
+        @media (max-width: 1100px) {
+            // Reset or adjust if needed. For now, let it flow/wrap naturally.
+            // Check if user wants it right-aligned when wrapped:
+             order: -1;
+             margin-left: 0; 
         }
 
         &-current {
             font-family: 'Involve', sans-serif;
-            font-size: rem(20);
+            font-style: normal;
+            font-size: clamp(rem(16), 0.5vw + rem(14), rem(20));
+            font-weight: 400;
+            line-height: rem(24);
+            letter-spacing: 0;
             color: #fff;
-                white-space: nowrap;
-            @media (max-width: $mobile) {
-                font-size: rem(16);
-            }
+            white-space: nowrap;
         }
 
         &-icon {
@@ -572,5 +588,13 @@
                  transform: rotate(180deg);
              }
         }
+    }
+}
+
+
+
+.portfolio-list_default .portfolio-card__badge{
+    @media (max-width: $mobile) {
+        top: rem(20);
     }
 }
